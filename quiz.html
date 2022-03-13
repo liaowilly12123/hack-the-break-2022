@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DebugRun application</title>
-    <link rel="stylesheet" href="/quizstyle.css">
+    <link rel="stylesheet" href="./styles/quizstyle.css">
+    <link rel="stylesheet" href="./styles/tiles.css">
     <!-- FontAweome CDN Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
@@ -38,6 +39,11 @@
 
     <!-- Quiz Box -->
     <div class="quiz_box">
+
+        <div id="path-goes-here">
+
+        </div>
+
         <header>
             <div class="title">DebugRun application</div>
             <div class="timer">
@@ -46,6 +52,8 @@
             </div>
             <div class="time_line"></div>
         </header>
+
+
         <section>
             <div class="que_text">
                 <!-- Here I've inserted question from JavaScript -->
@@ -95,6 +103,8 @@
 
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
     <script src="script.js"></script>
+    <script src="./scripts/util.js"></script>
+    <script src="./scripts/tiles.js"></script>
 
 </body>
 </html>
