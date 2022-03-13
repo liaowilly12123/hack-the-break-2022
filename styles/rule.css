@@ -15,7 +15,7 @@
     }
 
     #rulepage {
-        margin-top: 40%;
+        margin-top: 35%;
         font-family: 'Chakra Petch', sans-serif;
     }
 
@@ -32,6 +32,6 @@
     }
 
     ol li {
-        margin-bottom: 7%;
+        margin-bottom: 5%;
     }
 }
