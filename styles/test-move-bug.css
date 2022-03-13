@@ -1,0 +1,17 @@
+#game-grid {
+    display: grid;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+}
+
+.tile {
+    height: 100px;
+    border: 1px black solid;
+}
+
+.bug {
+    background-color: red;
+}
+
+.player {
+    background-color: green;
+}
