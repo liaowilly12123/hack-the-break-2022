@@ -1,7 +1,7 @@
 #tile-container {
     display: grid;
     height: 100%;
-    margin-top: 5%;
+    /* margin-top: 5%; */
     background-color: white;
     /* width: 100vw; */
     grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;

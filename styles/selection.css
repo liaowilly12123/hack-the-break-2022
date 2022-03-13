@@ -110,7 +110,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 5% 39% 1% 50% 5%;
+    grid-template-rows: 5% 40% 1.5% 46.5% 7%;
   }
 
   /* modal top nav */
@@ -133,8 +133,10 @@
   }
 
   .question-text {
-    font-size: 20pt;
-    margin: 10% 2% 0 2%;
+    font-size: 18pt;
+    margin: 4% 2% 0 2%;
+    text-align: left;
+
   }
 
   .option-list {
@@ -149,7 +151,7 @@
   /* Timebar */
   .timebar {
     height: 10px;
-    margin-top: 7%;
+    margin-top: 1%;
     background: green;
     border-radius: 10px;
 
@@ -179,14 +181,9 @@
 
 
   /* Questions */
-  #questions-container {}
-
-  .question-text {}
-
-  .option-list {}
-
   .option {
     background-color: lightgreen;
+    font-size: 16pt;
     margin: 0.1em;
   }
 
@@ -199,5 +196,14 @@
   #modal-next-btn {
     display: none;
     margin: auto;
+    padding: 10px;
+  }
+
+  .wrong {
+      background-color: rgb(238, 153, 153);
+  }
+
+  .correct {
+    background-color: lightgreen;
   }
 }
