@@ -69,6 +69,7 @@
   .info-title {
     font-size: 30pt;
     color: #22b14c;
+    margin-top: 5%;
     margin-bottom: 5%;
   }
 
@@ -181,7 +182,7 @@
 
   /* Questions */
   .option {
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     font-size: 16pt;
     margin: 0.1em;
   }

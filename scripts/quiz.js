@@ -89,7 +89,7 @@ function showQuestions() {
 
 function nextQuestion() {
     if (currentQuestionIdx < questions.length - 1) {
-        const optionList = document.querySelector(".option-list");
+        // const optionList = document.querySelector(".option-list");
         modalNextButton.style.display = "none";
         currentQuestionIdx++;
         removeChildren(optionList);
@@ -113,13 +113,29 @@ function optionSelected(userSelection) {
     clearInterval(counter);
 
     if (userSelection == correctAnswer) {
-        // add css to turn it green
+        for (let i = 0; i < optionsLength; i++) {
+            let child = optionList.children[i];
+            // add css to turn it green
+            if (child.textContent == correctAnswer) {
+                child.classList.add("correct");
+            }
+        }
+
         movePlayer();
         checkWin();
         console.log("correct");
     } else {
         // add css to turn selection red
-        // add css to turn correct answer green
+        for (let i = 0; i < optionsLength; i++) {
+            let child = optionList.children[i];
+            // add css to turn correct answer green
+            if (child.textContent == correctAnswer) {
+                child.classList.add("correct");
+            } 
+            if (child.textContent == userSelection) {
+                child.classList.add("wrong");
+            }
+        }
         moveBug();
         checkGameOver();
         console.log("incorrect");
