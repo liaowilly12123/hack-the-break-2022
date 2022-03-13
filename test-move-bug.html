@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/test-move-bug.css">
+    <link rel="stylesheet" href="./styles/timebar.css">
     <title>Document</title>
   </head>
   <body>
@@ -24,6 +25,11 @@
       <input type="button" onclick="move('player', 'left')" value="Left">
       <input type="button" onclick="move('player', 'right')" value="Right">
     </div>
+    <div id="time-bar" class="time-bar">
+      <div></div>
+    </div>
+    <input type="button" onclick="resetTimeBar()" value="Reset Time Bar">
     <script src="./scripts/test-move-bug.js"></script>
+    <script src="./scripts/timebar.js"></script>
   </body>
 </html>
