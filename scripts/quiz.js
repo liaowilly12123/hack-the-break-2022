@@ -10,6 +10,7 @@ const timeBar = document.getElementById("timebar");
 const optionList = document.querySelector(".option-list");
 const timeLimit = 4;
 
+let gameOver = false;
 let questions;
 let counter;
 
@@ -18,6 +19,8 @@ let counter;
 function openQuizModal() {
     modal.style.display = "block";
     startTimer(timeLimit);
+    createPath();
+    reset();
     showQuestions();
 }
 
@@ -111,10 +114,14 @@ function optionSelected(userSelection) {
 
     if (userSelection == correctAnswer) {
         // add css to turn it green
+        movePlayer();
+        checkWin();
         console.log("correct");
     } else {
         // add css to turn selection red
         // add css to turn correct answer green
+        moveBug();
+        checkGameOver();
         console.log("incorrect");
     }
 
@@ -187,7 +194,8 @@ function startTimer(time) {
             // }
 
             disableOptions(optionsLength);
-
+            moveBug();
+            checkGameOver();
             modalNextButton.style.display = "block";
             // console.log("done");
         }
@@ -197,5 +205,20 @@ function startTimer(time) {
 function disableOptions(optionsLength) {
     for (let i = 0; i < optionsLength; i++) {
         optionList.children[i].classList.add("disabled");
+    }
+}
+
+
+function checkGameOver() {
+    clearInterval(counter);
+    if (bugLocation == playLocation) {
+        window.location.href = "lose.html";
+    }
+}
+
+function checkWin() {
+    clearInterval(counter);
+    if (playLocation == success) {
+        window.location.href = "win.html";
     }
 }
