@@ -2,6 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@300&display=swap');
 
 @media screen and (min-width: 390px) and (max-width: 450px) {
+    body {
+        background-color: #FFE77AFF;
+    }
+
+    i {
+        position: absolute;
+        top: 1%;
+        left: 3%;
+        font-size: 100px;
+        color: #22B14C;
+    }
+
     #rulepage {
         margin-top: 40%;
         font-family: 'Chakra Petch', sans-serif;
@@ -14,7 +26,12 @@
     }
 
     #rulepage ol {
-        font-size: 19pt;
-        color: #22B14C;
+        font-size: 18pt;
+        color: black;
+        margin: 0 3% 0 3%;
+    }
+
+    ol li {
+        margin-bottom: 7%;
     }
 }
