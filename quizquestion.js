@@ -533,13 +533,73 @@ let questions2 = [{
 
     {
         numb: 20,
-        question: "An automation boundary is best described as the separation between the ____.",
-        answer: "Automated part of a system and the manual part of a system",
+        question: "Which of the following is an example of a technique used to complete specific system development activities?",
+        answer: "Project planning",
+        options: [
+            "Project planning",
+            "Integrated development environment (IDE)",
+            "Application service provider (ASP)",
+            "Automated part of a system and its environment"
+        ]
+    },
+
+    {
+        numb: 21,
+        question: "Which of the following is the analyst's approach to problem solving?",
+        answer: "Verify that the benefits of solving the problem outweigh the costs, then define the requirements for solving the problem.",
+        options: [
+            "Verify that the benefits of solving the problem outweigh the costs, then research and understand the problem.",
+            "Develop a set of possible solutions, then verify that the benefits of solving the problem outweigh the costs.",
+            "Verify that the benefits of solving the problem outweigh the costs, then define the requirements for solving the problem.",
+            "Implement the solution, then define the details of the chosen solution."
+        ]
+    },
+
+    {
+        numb: 22,
+        question: "The last step of the analyst's approach to problem solving is ____.",
+        answer: "Monitor to make sure that you obtain the desired results",
+        options: [
+            "Decide which solution is best, and make a recommendation",
+            "Monitor to make sure that you obtain the desired results",
+            "Verify that the benefits of solving the problem outweigh the costs",
+            "Implement the solution"
+        ]
+    },
+
+    {
+        numb: 23,
+        question: "A knowledge management system ____.",
+        answer: "Supports the storage of and access to documents within an organization",
+        options: [
+            "Indexes all the knowledge contained within an organization",
+            "Supports the storage of and access to documents within an organization",
+            "Is another term for a library system",
+            "Requires a very large amount of online storage space"
+        ]
+    },
+
+    {
+        numb: 24,
+        question: "An example of a project phase in a predictive project  is ____.",
+        answer: "Planning the project",
+        options: [
+            "Gathering information about the user's needs",
+            "Performing a project cost/benefit analysis",
+            "Planning the project",
+            "Drawing the system interface"
+        ]
+    },
+
+    {
+        numb: 25,
+        question: "The primary objective of the analysis phase is to ____.",
+        answer: "Understand and document the users' needs and requirements",
         options: [
             "System and its environment",
-            "Automated part of a system and the manual part of a system",
-            "Manual part of a system and its environment",
-            "Automated part of a system and its environment"
+            "Prioritize the alternatives for a new system",
+            "Determine the basic structure and approach for the new system",
+            "Understand and document the users' needs and requirements"
         ]
     },
 
@@ -779,12 +839,63 @@ let questions3 = [{
             "all-h1 {background-color:#FFFFFF;}"
         ]
     },
+    {
+        numb: 21,
+        question: "Which property is used to change the left margin of an element?",
+        answer: "margin-left",
+        options: [
+            "padding-left",
+            "margin-left",
+            "indent",
+            "margin-right"
+        ]
+    },
 
+    {
+        numb: 22,
+        question: "Which sign does jQuery use as a shortcut for jQuery?",
+        answer: "the $ sign",
+        options: [
+            "the ? sign",
+            "the # sign",
+            "the $ sign",
+            "the ! sign"
+        ]
+    },
 
+    {
+        numb: 23,
+        question: "With jQuery, look at the following selector: $('div.intro'). What does it select?",
+        answer: "Cascading Style Sheets",
+        options: [
+            "All div elements with id='intro'",
+            "The first div element with id='intro'",
+            "The first div element with class='intro'",
+            "All div elements with class='intro'"
+        ]
+    },
 
+    {
+        numb: 24,
+        question: "Bug: Part of a program that ___________ work correctly.",
+        answer: "does not",
+        options: [
+            "does not",
+            "sometimes",
+            "does",
+            "shows"
+        ]
+    },
 
-
-
-
-
+    {
+        numb: 25,
+        question: "RGB Color is use to change the background color or text within HTML. What does RGB stand from",
+        answer: "Red Green Blue",
+        options: [
+            "Rust Gilt Bronze",
+            "Red Gray Burgundy",
+            "Red Green Blue",
+            "Rose Gold Brown"
+        ]
+    },
 ];
