@@ -5,13 +5,14 @@ const web_btn = document.querySelector("#bizanal");
 const modal = document.querySelector(".quiz-modal");
 const infoModal = document.querySelector(".info-modal");
 const modalCloseButton = document.querySelector("#modal-close-btn");
+const modalNextButton = document.querySelector("#modal-next-btn")
 let questions;
 
 
 // quiz modal
 function openQuizModal() {
     modal.style.display = "block";
-    startQuiz();
+    showQuestions();
 }
 
 function closeQuizModal() {
@@ -20,7 +21,6 @@ function closeQuizModal() {
 
 // info modal
 function openInfoModal(selection) {
-    console.log(selection)
     if (selection == "j") {
         questions = questions1;
     }
@@ -46,13 +46,8 @@ function infoToQuiz() {
     openQuizModal();
 }
 
-function startQuiz() {
-    console.table(questions);
-    showQuestions();
-}
-
 let currentQuestionIdx = 0;
-
+let optionSelect = 0;
 // Questions
 // getting questions and options from array
 // uses global currentQuestionIdx
@@ -60,8 +55,9 @@ function showQuestions() {
     
     // Create new textNode for Question
     const question_text = document.querySelector(".question-text");
+    removeChildren(question_text);
+
     let questionTextNode = document.createTextNode(questions[currentQuestionIdx].question);
-    console.log(question_text)
     question_text.appendChild(questionTextNode);
 
     // Create options list
@@ -70,54 +66,61 @@ function showQuestions() {
         // create new option div
         let optionNode = document.createElement("div");
 
+        // add option class
         optionNode.classList.add("option");
+
         optionNode.innerHTML = option;
 
+        // add what happens when option is clicked
+        optionNode.onclick = () => { optionSelected(option) };
+
         option_list.appendChild(optionNode);
-        console.log(option)
     })
-
-
-
-    // //creating a new span and div tag for question and option and passing the value using array index
-    // let question_tag = '<span>' + questions[index].numb + ". " + questions[index].question + '</span>';
-    // let option_tag = '<div class="option"><span>' + questions[index].options[0] + '</span></div>' +
-    //     '<div class="option"><span>' + questions[index].options[1] + '</span></div>' +
-    //     '<div class="option"><span>' + questions[index].options[2] + '</span></div>' +
-    //     '<div class="option"><span>' + questions[index].options[3] + '</span></div>';
-    // question_text.innerHTML = question_tag; //adding new span tag inside que_tag
-    // option_list.innerHTML = option_tag; //adding new div tag inside option_tag
-
-    // const option = option_list.querySelectorAll(".option");
-
-    // // set onclick attribute to all available options
-    // for (i = 0; i < option.length; i++) {
-    //     option[i].setAttribute("onclick", "optionSelected(this)");
-    // }
 }
 
 function nextQuestion() {
     if (currentQuestionIdx < questions.length - 1) {
+        const optionList = document.querySelector(".option-list");
+        modalNextButton.style.display = "none";
         currentQuestionIdx++;
-        showQuestions()
+        removeChildren(optionList);
+        showQuestions();
+    } else {
+        closeQuizModal();
     }
 }
 
 //if user clicked on option
-function optionSelected(answer) {
-    // clearInterval(counter); //clear counter
-    // clearInterval(counterLine); //clear counterLine
-    let userAns = answer.textContent; //getting user selected option
-    let correcAns = questions[que_count].answer; //getting correct answer from array
-    const allOptions = option_list.children.length; //getting all option items
+function optionSelected(userSelection) {
+    const optionsLength = questions[currentQuestionIdx].options.length;
+    const correctAnswer = questions[currentQuestionIdx].answer;
 
-    if (userAns == correcAns) { //if user selected option is equal to array's correct answer
-        userScore += 1; //upgrading score value with 1
-        answer.classList.add("correct"); //adding green color to correct selected option
-        answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
-        console.log("Correct Answer");
-        console.log("Your correct answers = " + userScore);
+    if (userSelection == correctAnswer) {
+        // add css to turn it green
+        console.log("correct");
+    } else {
+        // add css to turn selection red
+        // add css to turn correct answer green
+        console.log("incorrect");
     }
+
+    // disable all options once a selection has been made
+    const optionList = document.querySelector(".option-list");
+
+    for (let i = 0; i < optionsLength; i++) {
+        optionList.children[i].classList.add("disabled");
+    }
+
+    // display next button
+    modalNextButton.style.display = "block";
+    
+    // if (userAns == correcAns) { //if user selected option is equal to array's correct answer
+    //     userScore += 1; //upgrading score value with 1
+    //     answer.classList.add("correct"); //adding green color to correct selected option
+    //     answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
+    //     console.log("Correct Answer");
+    //     console.log("Your correct answers = " + userScore);
+    // }
     // else {
     //     answer.classList.add("incorrect"); //adding red color to correct selected option
     //     answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
@@ -131,8 +134,11 @@ function optionSelected(answer) {
     //         }
     //     }
     // }
-    // for (i = 0; i < allOptions; i++) {
-    //     option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
-    // }
-    next_btn.classList.add("show"); //show the next button if user selected any option
+
+}
+
+function removeChildren(node) {
+    while (node.firstChild) {
+        node.removeChild(node.firstChild);
+    }
 }
