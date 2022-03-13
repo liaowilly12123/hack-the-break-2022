@@ -1,6 +1,7 @@
 #tile-container {
     display: grid;
     height: 100%;
+    margin-top: 5%;
     background-color: white;
     /* width: 100vw; */
     grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
@@ -8,36 +9,36 @@
 
 }
 
-.path{
-    background-color: #FFE77AFF;
+.path {
+    background-color: #22B14C;
     border-radius: 10px;
-    border: solid #FFE77AFF;
+    border: solid #22b14C;
     box-shadow: 3px 3px 10px 1px rgb(120, 120, 120);
     padding: 20px;
     margin: 5px;
 }
 
-img.bug{
+img.bug {
     width: 8vw;
     display: none;
 }
 
-img.player{
+img.player {
     width: 8vw;
     display: none;
 }
 
-img.bang{
+img.bang {
     width: 8vw;
     display: none;
 }
 
-img.success{
+img.success {
     width: 8vw;
     display: none;
 }
 
-img.end{
+img.end {
     width: 8vw;
     display: none;
 }

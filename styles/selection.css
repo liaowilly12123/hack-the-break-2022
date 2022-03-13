@@ -69,6 +69,7 @@
   .info-title {
     font-size: 30pt;
     color: #22b14c;
+    margin-top: 5%;
     margin-bottom: 5%;
   }
 
@@ -126,18 +127,18 @@
   }
 
   #questions-container {
-    background-color: rgb(216, 210, 211);
+    background-color: white;
     font-family: "Chakra Petch", sans-serif;
     font-weight: bold;
   }
 
   .question-text {
     font-size: 20pt;
-    margin: 5% 2% 0 2%;
+    margin: 10% 2% 0 2%;
   }
 
   .option-list {
-    margin: 5% 0 5% 0;
+    margin: 7% 0 5% 0;
     font-size: 18pt;
   }
 
@@ -148,6 +149,7 @@
   /* Timebar */
   .timebar {
     height: 10px;
+    margin-top: 7%;
     background: green;
     border-radius: 10px;
 
@@ -195,7 +197,7 @@
 
   /* Modal Next Button */
   #modal-next-btn {
-      display: none;
-      margin: auto;
+    display: none;
+    margin: auto;
   }
 }
