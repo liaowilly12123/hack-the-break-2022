@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@300&display=swap');
 
+@media screen and (min-width: 390px) and (max-width: 450px) {
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@
 
 body {
     background: #FFE77AFF;
+
 }
 
 ::selection {
@@ -31,7 +33,7 @@ body {
 }
 
 /* Added more buttons*/
-.java_btn {
+/* .java_btn {
     position: absolute;
     top: 20%;
     left: 50%;
@@ -56,7 +58,7 @@ body {
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+} */
 
 .info_box.activeInfo,
 .quiz_box.activeQuiz,
@@ -67,7 +69,7 @@ body {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.start_btn button {
+/* .start_btn button {
     font-size: 25px;
     font-weight: 500;
     color: #007bff;
@@ -77,10 +79,10 @@ body {
     border-radius: 5px;
     background: #fff;
     cursor: pointer;
-}
+} */
 
 
-.java_btn button {
+/* .java_btn button {
     font-size: 25px;
     font-weight: 500;
     color: #007bff;
@@ -91,9 +93,9 @@ body {
     background: #fff;
     cursor: pointer;
 
-}
+} */
 
-.system_btn button {
+/* .system_btn button {
     font-size: 25px;
     font-weight: 500;
     color: #007bff;
@@ -104,9 +106,9 @@ body {
     background: pink;
     cursor: pointer;
 
-}
+} */
 
-.web_btn button {
+/* .web_btn button {
     font-size: 25px;
     font-weight: 500;
     color: #007bff;
@@ -117,16 +119,10 @@ body {
     background: yellowgreen;
     cursor: pointer;
 
-}
-
-
-
-
-
-
+} */
 
 .info_box {
-    width: 540px;
+    width: 100%;
     background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
@@ -185,7 +181,7 @@ body {
 }
 
 .quiz_box {
-    width: 550px;
+    width: 100%;
     background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
@@ -389,7 +385,7 @@ footer button.show {
     border-radius: 5px;
     display: flex;
     padding: 25px 30px;
-    width: 450px;
+    width: 100%;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -458,4 +454,5 @@ footer button.show {
 .buttons button.quit:hover {
     color: #fff;
     background: #007bff;
+}
 }

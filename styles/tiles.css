@@ -9,7 +9,12 @@
 }
 
 .path{
-    background-color: darkgray;
+    background-color: #FFE77AFF;
+    border-radius: 10px;
+    border: solid #FFE77AFF;
+    box-shadow: 3px 3px 10px 1px rgb(120, 120, 120);
+    padding: 20px;
+    margin: 5px;
 }
 
 /* #path1 {
