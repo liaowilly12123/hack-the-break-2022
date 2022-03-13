@@ -6,6 +6,14 @@
         background-color: #FFE77AFF;
     }
 
+    i {
+        position: absolute;
+        top: 1%;
+        left: 3%;
+        font-size: 100px;
+        color: #22B14C;
+    }
+
     #aboutuspage {
         text-align: center;
         margin-top: 30%;

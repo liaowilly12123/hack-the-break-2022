@@ -1,5 +1,5 @@
 // creating an array and passing the number, questions, options, and answers
-let questions3 = [{
+let questions2 = [{
         numb: 1,
         question: "Examples of company-side applications called … include order processing systems, payroll systems, and company communications networks",
         answer: "Enterprise applications",

@@ -1,0 +1,103 @@
+#tile-container {
+    display: grid;
+    height: 100vh;
+    background-color: white;
+    /* width: 100vw; */
+    grid-template-columns: 16.6vw 16.6vw 16.6vw 16.6vw 16.6vw 16.6vw;
+    grid-template-rows: 16.6vh 16.6vh 16.6vh 16.6vh 16.6vh 16.6vh;
+
+}
+
+.path{
+    background-color: darkgray;
+}
+
+/* #path1 {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#path2 {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#path3 {
+    grid-row: 1;
+    grid-column: 3;
+}
+
+#path4 {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+#path5 {
+    grid-row: 2;
+    grid-column: 4;
+}
+
+#path6 {
+    grid-row: 2;
+    grid-column: 5;
+}
+
+#path7 {
+    grid-row: 2;
+    grid-column: 6;
+}
+
+#path8 {
+    grid-row: 3;
+    grid-column: 6;
+}
+
+#path9 {
+    grid-row: 4;
+    grid-column: 6;
+}
+
+#path10 {
+    grid-row: 4;
+    grid-column: 5;
+}
+
+#path11 {
+    grid-row: 4;
+    grid-column: 4;
+}
+
+#path12 {
+    grid-row: 4;
+    grid-column: 3;
+}
+
+#path13 {
+    grid-row: 4;
+    grid-column: 2;
+}
+
+#path14 {
+    grid-row: 5;
+    grid-column: 2;
+}
+
+#path15 {
+    grid-row: 6;
+    grid-column: 2;
+}
+
+#path16 {
+    grid-row: 6;
+    grid-column: 3;
+}
+
+#path17 {
+    grid-row: 6;
+    grid-column: 4;
+}
+
+#path18 {
+    grid-row: 6;
+    grid-column: 5;
+} */

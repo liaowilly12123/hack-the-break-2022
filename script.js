@@ -22,16 +22,24 @@ const option_list2 = document.querySelector(".option_list2");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
-
+let questions;
 
 //1510 start quiz
 java_btn.onclick = () => {
     info_box.classList.add("activeInfo"); //show info box
+    questions = questions1;
 }
 
 //1510 start quiz
 system_btn.onclick = () => {
     info_box.classList.add("activeInfo"); //show info box
+    questions = questions2;
+}
+
+//1510 start quiz
+web_btn.onclick = () => {
+    info_box.classList.add("activeInfo"); //show info box
+    questions = questions3;
 }
 
 // if startQuiz button clicked
