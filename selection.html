@@ -16,10 +16,35 @@
         <a href="index.html"><i class="fa fa-arrow-left w3-xxlarge"></i></a>
         <img src="./images/bug.svg" width="120">
         <p>Choose your subject</p>
-        <a href="#" class="button">JAVA</a>
-        <a href="#" class="button">WEB DEVELOPMENT</a>
-        <a href="#" class="button">SYSTEM ANALYSIS</a>
+        <div id="java" class="button" onclick="openInfoModal()">JAVA</div>
+        <div id="webdev" class="button">WEB DEVELOPMENT</div>
+        <div id="bizanal" class="button">SYSTEM ANALYSIS</div>
     </div>
+
+    <section class="info-modal">
+        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. You will have only <span>20 seconds</span> per each question.</div>
+            <div class="info">2. Once you select your answer, it can't be undone.</div>
+            <div class="info">3. You can't select any option once time goes off.</div>
+            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+        </div>
+        <div class="buttons">
+            <button onclick="closeInfoModal()">Exit Quiz</button>
+            <button onclick="infoToQuiz()">Continue</button>
+        </div>
+    </section>
+
+    <section class="quiz-modal">
+        <div>
+            test
+        </div>
+        
+        <button id="modal-close-btn" class="" onclick="closeQuizModal()">close</button>
+
+    </section>
+    <script src="./scripts/quiz.js"></script>
 </body>
 
 </html>

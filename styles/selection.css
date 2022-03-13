@@ -4,6 +4,7 @@
 @media screen and (min-width: 390px) and (max-width: 450px) {
     body {
         background-color: #FFE77AFF;
+        max-height: 100vh;
     }
 
     i {
@@ -41,5 +42,34 @@
         font-size: 25px;
         font-family: 'Chakra Petch', sans-serif;
         font-weight: bold;
+    }
+
+
+    /* Quiz Modal */
+    .quiz-modal {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        text-align: center;
+        display: none;
+    }
+    
+    /* Quiz Modal */
+    .info-modal {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        text-align: center;
+        display: none;
     }
 }
