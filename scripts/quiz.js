@@ -7,13 +7,17 @@ const infoModal = document.querySelector(".info-modal");
 const modalCloseButton = document.querySelector("#modal-close-btn");
 const modalNextButton = document.querySelector("#modal-next-btn")
 const timeBar = document.getElementById("timebar");
+const optionList = document.querySelector(".option-list");
+const timeLimit = 4;
 
 let questions;
+let counter;
 
 
 // quiz modal
 function openQuizModal() {
     modal.style.display = "block";
+    startTimer(timeLimit);
     showQuestions();
 }
 
@@ -54,7 +58,7 @@ let currentQuestionIdx = 0;
 // getting questions and options from array
 // uses global currentQuestionIdx
 function showQuestions() {
-    
+
     // Create new textNode for Question
     const question_text = document.querySelector(".question-text");
     removeChildren(question_text);
@@ -87,8 +91,11 @@ function nextQuestion() {
         currentQuestionIdx++;
         removeChildren(optionList);
         showQuestions();
+        clearInterval(counter);
+        startTimer(timeLimit);
         resetTimeBar();
     } else {
+        clearInterval(counter);
         closeQuizModal();
     }
 }
@@ -100,6 +107,7 @@ function optionSelected(userSelection) {
 
     // Stop timer and timebar
     timeBar.classList.add("paused");
+    clearInterval(counter);
 
     if (userSelection == correctAnswer) {
         // add css to turn it green
@@ -111,15 +119,14 @@ function optionSelected(userSelection) {
     }
 
     // disable all options once a selection has been made
-    const optionList = document.querySelector(".option-list");
-
-    for (let i = 0; i < optionsLength; i++) {
-        optionList.children[i].classList.add("disabled");
-    }
+    disableOptions(optionsLength);
+    // for (let i = 0; i < optionsLength; i++) {
+    //     optionList.children[i].classList.add("disabled");
+    // }
 
     // display next button
     modalNextButton.style.display = "block";
-    
+
     // if (userAns == correcAns) { //if user selected option is equal to array's correct answer
     //     userScore += 1; //upgrading score value with 1
     //     answer.classList.add("correct"); //adding green color to correct selected option
@@ -152,8 +159,43 @@ function removeChildren(node) {
 function resetTimeBar() {
     timeBar.classList.remove("timebar");
     timeBar.classList.remove("paused");
-  
+
     void timeBar.offsetWidth;
-  
+
     timeBar.classList.add("timebar");
-  }
+}
+
+
+function startTimer(time) {
+    time = time
+    counter = setInterval(timer, 1000);
+
+    function timer() {
+        const optionsLength = questions[currentQuestionIdx].options.length;
+        // timeCount.textContent = time; //changing the value of timeCount with time value
+        time--; //decrement the time value
+        if (time < 1) { //if timer is less than 0
+            clearInterval(counter); //clear counter
+            // const allOptions = option_list.children.length; //getting all option items
+            // let correcAns = questions[que_count].answer; //getting correct answer from array
+            // for (i = 0; i < allOptions; i++) {
+            //     if (option_list.children[i].textContent == correcAns) { //if there is an option which is matched to an array answer
+            //         option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
+            //         option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to matched option
+            //         console.log("Time Off: Auto selected correct answer.");
+            //     }
+            // }
+
+            disableOptions(optionsLength);
+
+            modalNextButton.style.display = "block";
+            // console.log("done");
+        }
+    }
+}
+
+function disableOptions(optionsLength) {
+    for (let i = 0; i < optionsLength; i++) {
+        optionList.children[i].classList.add("disabled");
+    }
+}
