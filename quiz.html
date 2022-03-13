@@ -2,33 +2,52 @@
 <!-- Created By CodingNepal - www.codingnepalweb.com -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+    <link rel="stylesheet" href="./styles/quiz.css">
+
     <title>DebugRun application</title>
-    <link rel="stylesheet" href="./styles/quizstyle.css">
     <!-- FontAweome CDN Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="./styles/selection.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
+
 <body>
 
     <!-- start Quiz button -->
     <!-- <div class="start_btn"><button>Start Quiz</button></div> -->
-    <div class="java_btn" onclick="openInfoModal()"><button>Comp1510 Java Quiz</button></div>
+
+    <div id="selectionpage">
+        <a href="index.html"><i class="fa fa-arrow-left w3-xxlarge"></i></a>
+        <img src="./images/bug.svg" width="120">
+        <p>Choose your subject</p>
+
+        <div class="java_btn"><button class="button1">JAVA</button></div>
+        <div class="web_btn"><button class="button1">WEB DEVELOPMENT</button></div>
+        <div class="system_btn"><button class="button1">SYSTEM ANALYSIS</button></div>
+    </div>
+    <!-- <div class="java_btn"><button>Comp1510 Java Quiz</button></div>
     <div class="system_btn"><button>Business Analysis and System Design Quiz</button></div>
-    <div class="web_btn"><button>Web Development Quiz</button></div>
+    <div class="web_btn"><button>Web Development Quiz</button></div> -->
 
-
+  
 
     <!-- Info Box -->
     <div class="info_box">
-        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-title"><span>Rule of the game</span></div>
         <div class="info-list">
-            <div class="info">1. You will have only <span>20 seconds</span> per each question.</div>
-            <div class="info">2. Once you select your answer, it can't be undone.</div>
+            <div class="info">1. There are 15 questions in one quiz.</div>
+            <div class="info">2. Only <span>15 seconds</span> will be given per each question.</div>
             <div class="info">3. You can't select any option once time goes off.</div>
-            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+            <div class="info">4. If you get the right answer, the player moves one.</div>
+            <div class="info">5. If you get the wrong answer, the bug moves one.</div>
+            <div class="info">6. You win the game if you don't get caught from the bug <br>
+                and reach the red flag.</div>
+
         </div>
         <div class="buttons">
             <button class="quit">Exit Quiz</button>
@@ -39,7 +58,7 @@
     <!-- Quiz Box -->
     <div class="quiz_box">
         <header>
-            <div class="title">DebugRun application</div>
+            <div class="title">DebugRun</div>
             <div class="timer">
                 <div class="time_left_txt">Time Left</div>
                 <div class="timer_sec">20</div>
@@ -54,6 +73,7 @@
                 <!-- Here I've inserted options from JavaScript -->
             </div>
         </section>
+
 
         <!-- footer of Quiz Box -->
         <footer>
@@ -74,18 +94,19 @@
             <!-- Here I've inserted Score Result from JavaScript -->
         </div>
         <div class="buttons">
-            <button class="restart">Replay Quiz</button>
-            <button class="quit">Quit Quiz</button>
+            <a href="quiz.html"><button class="restart">Replay Quiz</button></a>
+            <a href="index.html"><button class="quit">Quit Quiz</button></a>
         </div>
     </div>
 
     <!-- Inside this JavaScript file I've inserted Questions and Options only -->
-    <script src="quizquestion.js"></script>
-    <!-- <script src="webquestion.js"></script>
-    <script src="1712quiz.js"></script> -->
+    <script src="./scripts/quizquestion.js"></script>
+    <script src="./scripts/webquestion.js"></script>
+    <script src="./scripts/1712quiz.js"></script>
 
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
-    <script src="script.js"></script>
+    <script src="./scripts/script.js"></script>
 
 </body>
+
 </html>
