@@ -4,7 +4,7 @@
 @media screen and (min-width: 390px) and (max-width: 450px) {
   body {
     background-color: #ffe77aff;
-    max-height: 100vh;
+    max-height: 100%;
   }
 
   i {
@@ -26,8 +26,8 @@
   #selectionpage P {
     font-size: 25pt;
     font-family: "Chakra Petch", sans-serif;
-    font-weight: bold;
     margin-bottom: 20%;
+    font-weight: bold;
   }
 
   .button {
@@ -44,6 +44,10 @@
     font-weight: bold;
   }
 
+  .button:hover {
+    color: lightgreen;
+  }
+
   /* Info Modal */
   .info-modal {
     position: absolute;
@@ -56,6 +60,35 @@
     z-index: 9999;
     text-align: center;
     display: none;
+    background-color: #FFE77AFF;
+    margin-top: 40%;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bold;
+  }
+
+  .info-title {
+    font-size: 30pt;
+    color: #22b14c;
+    margin-bottom: 5%;
+  }
+
+  .info-list {
+    font-size: 15pt;
+    text-align: left;
+    margin: 10% 5% 15% 7%;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  #exit {
+    margin-right: 10%;
+  }
+
+  #continue {
+    margin-left: 10%;
   }
 
   /* Quiz Modal */
@@ -83,9 +116,8 @@
   #modal-nav {
     /* background-color: #22b14c; */
     /* height: 3em; */
-    background-color: rgb(219, 219, 219);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    background-color: #FFE77AFF;
+    margin-bottom: -2%;
   }
 
   #path-container {
@@ -95,6 +127,22 @@
 
   #questions-container {
     background-color: rgb(216, 210, 211);
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: bold;
+  }
+
+  .question-text {
+    font-size: 20pt;
+    margin: 5% 2% 0 2%;
+  }
+
+  .option-list {
+    margin: 5% 0 5% 0;
+    font-size: 18pt;
+  }
+
+  .modal-close-btn {
+    color: white;
   }
 
   .timebar {
@@ -110,9 +158,11 @@
     100% {
       background-color: green;
     }
+
     50% {
       background-color: orange;
     }
+
     to {
       background: red;
       transform: scaleX(0);
@@ -122,20 +172,14 @@
 
 
   /* Questions */
-  #questions-container {
-    
-  }
+  #questions-container {}
 
-  .question-text {
+  .question-text {}
 
-  }
-
-  .option-list {
-
-  }
+  .option-list {}
 
   .option {
-      background-color: aquamarine;
-      margin: 0.1em;
+    background-color: lightgreen;
+    margin: 0.1em;
   }
 }

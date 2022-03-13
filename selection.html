@@ -23,31 +23,33 @@
     </div>
 
     <section class="info-modal">
-        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-title"><span>Rule of The Game</span></div>
         <div class="info-list">
-            <div class="info">1. You will have only <span>20 seconds</span> per each question.</div>
-            <div class="info">2. Once you select your answer, it can't be undone.</div>
+            <div class="info">1. There are 15 questions in one quiz.</div>
+            <div class="info">2. Only <span>20 seconds</span> will be given per each question.</div>
             <div class="info">3. You can't select any option once time goes off.</div>
-            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+            <div class="info">4. If you get the right answer, the player moves one.</div>
+            <div class="info">5. If you get the wrong answer, the bug moves one.</div>
+            <div class="info">6. You win the game if you don't get caught from the bug
+                and reach the red flag.</div>
         </div>
         <div class="buttons">
-            <button onclick="closeInfoModal()">Exit Quiz</button>
-            <button onclick="infoToQuiz()">Continue</button>
+            <div id="exit" class="button" onclick="closeInfoModal()">Selection</div>
+            <div id="continue" class="button" onclick="infoToQuiz()">Continue</div>
         </div>
     </section>
 
     <section class="quiz-modal">
         <!-- Top nav bar -->
         <div id="content-container">
-            <nav id="modal-nav">navvvv</nav>
-    
+            <nav id="modal-nav"><a href="selection.html"><i class="fa fa-arrow-left w3-xxlarge"></i></a></nav>
+
             <!-- Path container -->
             <div id="path-container"></div>
-    
+
             <!-- Timer -->
             <div class="timebar"></div>
-    
+
             <!-- Question container -->
             <div id="questions-container">
                 <div class="question-text">
@@ -57,7 +59,7 @@
                     <!-- Here I've inserted options from JavaScript -->
                 </div>
             </div>
-            
+
             <div id="modal-footer">
                 <button id="modal-close-btn" class="" onclick="closeQuizModal()">close</button>
             </div>
@@ -67,7 +69,7 @@
     <script src="./quizquestion.js"></script>
     <script src="./scripts/tiles.js"></script>
     <script src="./scripts/quiz.js"></script>
-    
+
 </body>
 
 </html>
