@@ -21,7 +21,7 @@
         <div id="webdev" class="button" onclick="openInfoModal('w')">WEB DEVELOPMENT</div>
         <div id="bizanal" class="button" onclick="openInfoModal('b')">SYSTEM ANALYSIS</div>
     </div>
-
+    
     <section class="info-modal">
         <div class="info-title"><span>Rule of The Game</span></div>
         <div class="info-list">
@@ -48,20 +48,19 @@
             <div id="path-container"></div>
 
             <!-- Timer -->
-            <div class="timebar"></div>
+            <div id="timebar" class="timebar"></div>
 
             <!-- Question container -->
             <div id="questions-container">
                 <div class="question-text">
-                    <!-- Here I've inserted question from JavaScript -->
                 </div>
                 <div class="option-list">
-                    <!-- Here I've inserted options from JavaScript -->
                 </div>
             </div>
 
             <div id="modal-footer">
-                <button id="modal-close-btn" class="" onclick="closeQuizModal()">close</button>
+                <!-- <button id="modal-close-btn" class="" onclick="closeQuizModal()">close</button> -->
+                <button id="modal-next-btn" class="" onclick="nextQuestion()">Next Question</button>
             </div>
         </div>
 

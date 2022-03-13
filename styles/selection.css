@@ -145,12 +145,13 @@
     color: white;
   }
 
+  /* Timebar */
   .timebar {
     height: 10px;
     background: green;
     border-radius: 10px;
 
-    /* animation: roundtime 4s linear forwards; */
+    animation: roundtime 4s linear forwards;
     transform-origin: right center;
   }
 
@@ -169,6 +170,10 @@
     }
   }
 
+  .paused {
+    animation-play-state: paused;
+  }
+
 
 
   /* Questions */
@@ -181,5 +186,16 @@
   .option {
     background-color: lightgreen;
     margin: 0.1em;
+  }
+
+  .disabled {
+    pointer-events: none;
+  }
+
+
+  /* Modal Next Button */
+  #modal-next-btn {
+      display: none;
+      margin: auto;
   }
 }
