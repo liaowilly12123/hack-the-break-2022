@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./styles/selection.css" rel="stylesheet">
+    <link href="./styles/tiles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>selection</title>
@@ -16,9 +17,9 @@
         <a href="index.html"><i class="fa fa-arrow-left w3-xxlarge"></i></a>
         <img src="./images/bug.svg" width="120">
         <p>Choose your subject</p>
-        <div id="java" class="button" onclick="openInfoModal()">JAVA</div>
-        <div id="webdev" class="button">WEB DEVELOPMENT</div>
-        <div id="bizanal" class="button">SYSTEM ANALYSIS</div>
+        <div id="java" class="button" onclick="openInfoModal('j')">JAVA</div>
+        <div id="webdev" class="button" onclick="openInfoModal('w')">WEB DEVELOPMENT</div>
+        <div id="bizanal" class="button" onclick="openInfoModal('b')">SYSTEM ANALYSIS</div>
     </div>
 
     <section class="info-modal">
@@ -37,14 +38,36 @@
     </section>
 
     <section class="quiz-modal">
-        <div>
-            test
+        <!-- Top nav bar -->
+        <div id="content-container">
+            <nav id="modal-nav">navvvv</nav>
+    
+            <!-- Path container -->
+            <div id="path-container"></div>
+    
+            <!-- Timer -->
+            <div class="timebar"></div>
+    
+            <!-- Question container -->
+            <div id="questions-container">
+                <div class="question-text">
+                    <!-- Here I've inserted question from JavaScript -->
+                </div>
+                <div class="option-list">
+                    <!-- Here I've inserted options from JavaScript -->
+                </div>
+            </div>
+            
+            <div id="modal-footer">
+                <button id="modal-close-btn" class="" onclick="closeQuizModal()">close</button>
+            </div>
         </div>
-        
-        <button id="modal-close-btn" class="" onclick="closeQuizModal()">close</button>
 
     </section>
+    <script src="./quizquestion.js"></script>
+    <script src="./scripts/tiles.js"></script>
     <script src="./scripts/quiz.js"></script>
+    
 </body>
 
 </html>
