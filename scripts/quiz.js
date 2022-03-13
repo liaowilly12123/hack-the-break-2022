@@ -6,6 +6,8 @@ const modal = document.querySelector(".quiz-modal");
 const infoModal = document.querySelector(".info-modal");
 const modalCloseButton = document.querySelector("#modal-close-btn");
 const modalNextButton = document.querySelector("#modal-next-btn")
+const timeBar = document.getElementById("timebar");
+
 let questions;
 
 
@@ -47,7 +49,7 @@ function infoToQuiz() {
 }
 
 let currentQuestionIdx = 0;
-let optionSelect = 0;
+// let optionSelect = 0;
 // Questions
 // getting questions and options from array
 // uses global currentQuestionIdx
@@ -85,6 +87,7 @@ function nextQuestion() {
         currentQuestionIdx++;
         removeChildren(optionList);
         showQuestions();
+        resetTimeBar();
     } else {
         closeQuizModal();
     }
@@ -94,6 +97,9 @@ function nextQuestion() {
 function optionSelected(userSelection) {
     const optionsLength = questions[currentQuestionIdx].options.length;
     const correctAnswer = questions[currentQuestionIdx].answer;
+
+    // Stop timer and timebar
+    timeBar.classList.add("paused");
 
     if (userSelection == correctAnswer) {
         // add css to turn it green
@@ -142,3 +148,12 @@ function removeChildren(node) {
         node.removeChild(node.firstChild);
     }
 }
+
+function resetTimeBar() {
+    timeBar.classList.remove("timebar");
+    timeBar.classList.remove("paused");
+  
+    void timeBar.offsetWidth;
+  
+    timeBar.classList.add("timebar");
+  }
