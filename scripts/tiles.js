@@ -107,6 +107,7 @@ function movePlayer() {
         end.style.display = "none";
         success = document.querySelector('#path18 .success');
         success.style.display = "inline";
+        playLocation++;
     } else {
         player = bug = document.querySelector('#path' + playLocation + ' .player');
         bug.style.display = "none";
