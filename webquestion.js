@@ -1,5 +1,5 @@
 // creating an array and passing the number, questions, options, and answers
-let questions2 = [{
+let questions3 = [{
         numb: 1,
         question: "What does HTML stand for?",
         answer: "Hyper Text Markup Language",

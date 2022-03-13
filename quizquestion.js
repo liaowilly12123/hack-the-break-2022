@@ -1,5 +1,5 @@
 // creating an array and passing the number, questions, options, and answers
-let questions = [{
+let questions1 = [{
         numb: 1,
         question: "Which of the following is a valid class name?",
         answer: "CustomerMaintApp",
