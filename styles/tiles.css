@@ -16,6 +16,9 @@
     box-shadow: 3px 3px 10px 1px rgb(120, 120, 120);
     padding: 20px;
     margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 img.bug {
