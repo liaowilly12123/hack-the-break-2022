@@ -10,7 +10,6 @@ const timeBar = document.getElementById("timebar");
 const optionList = document.querySelector(".option-list");
 const timeLimit = 4;
 
-let gameOver = false;
 let questions;
 let counter;
 
@@ -56,7 +55,6 @@ function infoToQuiz() {
 }
 
 let currentQuestionIdx = 0;
-// let optionSelect = 0;
 // Questions
 // getting questions and options from array
 // uses global currentQuestionIdx
@@ -89,7 +87,6 @@ function showQuestions() {
 
 function nextQuestion() {
     if (currentQuestionIdx < questions.length - 1) {
-        // const optionList = document.querySelector(".option-list");
         modalNextButton.style.display = "none";
         currentQuestionIdx++;
         removeChildren(optionList);
@@ -118,6 +115,8 @@ function optionSelected(userSelection) {
             // add css to turn it green
             if (child.textContent == correctAnswer) {
                 child.classList.add("correct");
+            } else {
+                child.style.opacity = 0.3;
             }
         }
 
@@ -134,6 +133,8 @@ function optionSelected(userSelection) {
             } 
             if (child.textContent == userSelection) {
                 child.classList.add("wrong");
+            } else {
+                child.style.opacity = 0.3;
             }
         }
         moveBug();
@@ -146,21 +147,6 @@ function optionSelected(userSelection) {
 
     // display next button
     modalNextButton.style.display = "block";
-
-    // else {
-    //     answer.classList.add("incorrect"); //adding red color to correct selected option
-    //     answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
-    //     console.log("Wrong Answer");
-
-    //     for (i = 0; i < allOptions; i++) {
-    //         if (option_list.children[i].textContent == correcAns) { //if there is an option which is matched to an array answer 
-    //             option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
-    //             option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to matched option
-    //             console.log("Auto selected correct answer.");
-    //         }
-    //     }
-    // }
-
 }
 
 function removeChildren(node) {
@@ -185,24 +171,18 @@ function startTimer(time) {
 
     function timer() {
         const optionsLength = questions[currentQuestionIdx].options.length;
-        // timeCount.textContent = time; //changing the value of timeCount with time value
+
         time--; //decrement the time value
         if (time < 1) { //if timer is less than 0
             clearInterval(counter); //clear counter
-            // const allOptions = option_list.children.length; //getting all option items
-            // let correcAns = questions[que_count].answer; //getting correct answer from array
-            // for (i = 0; i < allOptions; i++) {
-            //     if (option_list.children[i].textContent == correcAns) { //if there is an option which is matched to an array answer
-            //         option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
-            //         option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to matched option
-            //         console.log("Time Off: Auto selected correct answer.");
-            //     }
-            // }
+
             for (let i = 0; i < optionsLength; i++) {
                 let child = optionList.children[i];
                 // add css to turn it green
                 if (child.textContent == questions[currentQuestionIdx].answer) {
                     child.classList.add("correct");
+                } else {
+                    child.style.opacity = 0.3;
                 }
             }
             
