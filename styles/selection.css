@@ -10,7 +10,8 @@
         position: absolute;
         top: 1%;
         left: 3%;
-        font-size: 15rem;
+        font-size: 100px;
+        color: #22B14C;
     }
 
     #selectionpage {
