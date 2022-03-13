@@ -172,6 +172,141 @@ let questions1 = [{
         ]
     },
 
+    {
+        numb: 16,
+        question: "Number of primitive data types in Java are?",
+        answer: "8",
+        options: [
+            "6",
+            "7",
+            "8",
+            "9"
+        ]
+    },
+
+    {
+        numb: 17,
+        question: "What is the size of float and double in java?",
+        answer: "32 and 64",
+        options: [
+            "32 and 64",
+            "32 and 32",
+            "64 and 64",
+            "64 and 32"
+        ]
+    },
+
+    {
+        numb: 18,
+        question: "Automatic type conversion is possible in which of the possible cases?",
+        answer: "Int to long",
+        options: [
+            "Int to long",
+            "Byte to int",
+            "Long to int",
+            "Short to int"
+        ]
+    },
+
+    {
+        numb: 19,
+        question: "Which type of loop is best known for its boolean condition that controls entry to the loop?",
+        answer: "while",
+        options: [
+            "do-while loop",
+            "for (traditional)",
+            "for-each",
+            "while"
+        ]
+    },
+
+    {
+        numb: 20,
+        question: "Which type of loop is best known for using an index or counter?",
+        answer: "for (traditional)",
+        options: [
+            "do-while loop",
+            "for (traditional)",
+            "for-each",
+            "while"
+        ]
+    },
+
+    {
+        numb: 21,
+        question: "Which type of loop is guaranteed to have the body execute at least once?",
+        answer: "do-while loop",
+        options: [
+            "do-while loop",
+            "for (traditional)",
+            "for-each",
+            "while"
+        ]
+    },
+
+    {
+        numb: 21,
+        question: "Which of the following can loop through an array without referring to the elements by index?",
+        answer: "for-each",
+        options: [
+            "do-while loop",
+            "for (traditional)",
+            "for-each",
+            "while"
+        ]
+    },
+
+    {
+        numb: 22,
+        question: "How do you determine the number of elements in an array? \nint buses[] = new int[5];",
+        answer: "buses.length",
+        options: [
+            "buses.length",
+            "buses.length()",
+            "buses.size",
+            "buses.size()"
+        ]
+    },
+
+    {
+        numb: 23,
+        question: "Which of the following create an empty two-dimensional array with dimensions 2*2?",
+        answer: "int[][] blue = new int[2][2];",
+        options: [
+            "int[][] blue = new int[2, 2];",
+            "int[][] blue = new int[2], [2];",
+            "int[][] blue = new int[2][2];",
+            "int[][] blue = new int[2 x 2];"
+        ]
+    },
+
+    {
+        numb: 24,
+        question: "Which is not a true statement about an array?",
+        answer: "int[][] blue = new int[2][2];",
+        options: [
+            "An array expands automatically when it is full.",
+            "An array is allowed to contain duplicate values.",
+            "An array understands the concept of ordered elements.",
+            "An array uses a zero index to reference the first element."
+        ]
+    },
+
+    {
+        numb: 25,
+        question: "Which of these keywords is used to define interfaces in Java?",
+        answer: "interface",
+        options: [
+            "interface",
+            "Interface",
+            "intf",
+            "Intf"
+        ]
+    },
+
+
+
+
 ];
 
 // creating an array and passing the number, questions, options, and answers
@@ -345,6 +480,66 @@ let questions2 = [{
             "The system must be operated seven days a week, 365 days a year",
             "The equipment rental system must not execute new rental transactions for customers who have overdue accountst",
             "All transactions must have audit trails "
+        ]
+    },
+
+    {
+        numb: 16,
+        question: "The process of understanding and specifying in detail what the information system should accomplish is called systems ____.",
+        answer: "Analysis",
+        options: [
+            "Specification",
+            "Design",
+            "Analysis",
+            "Administration"
+        ]
+    },
+
+    {
+        numb: 17,
+        question: "Systems ____ means specifying in detail how the many components of the information system should be physically implemented",
+        answer: "Design",
+        options: [
+            "Specification",
+            "Analysis",
+            "Design",
+            "Administration"
+        ]
+    },
+
+    {
+        numb: 18,
+        question: "The most important role of a systems analyst in business is ____.",
+        answer: "Problem solving",
+        options: [
+            "Technical understanding of information systems",
+            "Problem solving",
+            "Knowing what data needs to be stored and used",
+            "Special programming skills"
+        ]
+    },
+
+    {
+        numb: 19,
+        question: "____ refers to the division of a system into processes or subsystems.",
+        answer: "Functional decomposition",
+        options: [
+            "System design",
+            "Data management",
+            "Programming",
+            "Functional decomposition"
+        ]
+    },
+
+    {
+        numb: 20,
+        question: "An automation boundary is best described as the separation between the ____.",
+        answer: "Automated part of a system and the manual part of a system",
+        options: [
+            "System and its environment",
+            "Automated part of a system and the manual part of a system",
+            "Manual part of a system and its environment",
+            "Automated part of a system and its environment"
         ]
     },
 
@@ -524,6 +719,72 @@ let questions3 = [{
             "Put the 'My Page' text inside the tags."
         ]
     },
+
+    {
+        numb: 16,
+        question: "How can you make a numbered list?",
+        answer: "<ol>",
+        options: [
+            "<list>",
+            "<dl>",
+            "<ul>",
+            "<ol>"
+        ]
+    },
+
+    {
+        numb: 17,
+        question: "What is the correct HTML for making a checkbox?",
+        answer: "<input type='checkbox'>",
+        options: [
+            "<checkbox>",
+            "<input type='checkbox'>",
+            "<check>",
+            "<input type='check'>"
+        ]
+    },
+
+    {
+        numb: 18,
+        question: "What does CSS stand for?",
+        answer: "Cascading Style Sheets",
+        options: [
+            "Colorful Style Sheets",
+            "Computer Style Sheets",
+            "Cascading Style Sheets",
+            "Creative Style Sheets"
+        ]
+    },
+
+    {
+        numb: 19,
+        question: "Which is the correct CSS syntax?",
+        answer: "body {color: black;}",
+        options: [
+            "body {color: black;}",
+            "{body:color=black;}",
+            "body:color=black;",
+            "{body;color:black;}"
+        ]
+    },
+
+    {
+        numb: 20,
+        question: "How do you add a background color for all <h1> elements?",
+        answer: "h1 {background-color:#FFFFFF;}",
+        options: [
+            "h1 {background-color:#FFFFFF;}",
+            "h1.all {background-color:#FFFFFF;}",
+            "all.h1 {background-color:#FFFFFF;}",
+            "all-h1 {background-color:#FFFFFF;}"
+        ]
+    },
+
+
+
+
+
+
 
 
 ];
