@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@500&display=swap');
+
+@media screen and (min-width: 390px) and (max-width: 450px) {
+    body {
+        background-color: #FFE77AFF;
+    }
+
+    #aboutuspage {
+        text-align: center;
+        margin-top: 30%;
+        font-family: 'Smooch Sans', sans-serif;
+    }
+
+    .aboutus-heading {
+        font-size: 30pt;
+        margin-bottom: -3%;
+        color: #0a6826;
+        font-weight: bold;
+    }
+
+    #story p {
+        margin-left: 6%;
+        margin-right: 6%;
+        font-size: 16pt;
+    }
+
+    #team p {
+        font-size: 16pt;
+    }
+
+    #members {
+        font-size: 16pt;
+    }
+}

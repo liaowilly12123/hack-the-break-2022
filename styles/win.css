@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+@media screen and (min-width: 390px) and (max-width: 450px) {
+    body {
+        background-color: #FFE77AFF;
+    }
+
+    #winpage {
+        text-align: center;
+        margin-top: 40%;
+    }
+
+    #win-message p {
+        color: #0239FA;
+        font-size: 30pt;
+        font-family: 'Chakra Petch', sans-serif;
+    }
+
+    #winpage a {
+        text-decoration: none;
+        color: #22B14C;
+        font-size: 18pt;
+    }
+}
