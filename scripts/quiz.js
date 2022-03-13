@@ -198,7 +198,14 @@ function startTimer(time) {
             //         console.log("Time Off: Auto selected correct answer.");
             //     }
             // }
-
+            for (let i = 0; i < optionsLength; i++) {
+                let child = optionList.children[i];
+                // add css to turn it green
+                if (child.textContent == questions[currentQuestionIdx].answer) {
+                    child.classList.add("correct");
+                }
+            }
+            
             disableOptions(optionsLength);
             moveBug();
             checkGameOver();
