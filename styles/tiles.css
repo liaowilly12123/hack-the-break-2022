@@ -1,10 +1,10 @@
 #tile-container {
     display: grid;
-    height: 100%;
+    height: 100vh;
     background-color: white;
     /* width: 100vw; */
-    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
-    grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-columns: 16.6vw 16.6vw 16.6vw 16.6vw 16.6vw 16.6vw;
+    grid-template-rows: 16.6vh 16.6vh 16.6vh 16.6vh 16.6vh 16.6vh;
 
 }
 
@@ -16,6 +16,35 @@
     padding: 20px;
     margin: 5px;
 }
+
+img.bug{
+    width: 8vw;
+    display: none;
+}
+
+img.player{
+    width: 8vw;
+    display: none;
+}
+
+img.bang{
+    width: 8vw;
+    display: none;
+}
+
+img.success{
+    width: 8vw;
+    display: none;
+}
+
+img.end{
+    width: 8vw;
+    display: none;
+}
+
+/* .display-none {
+    display: none;
+} */
 
 /* #path1 {
     grid-row: 1;
