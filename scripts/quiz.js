@@ -128,14 +128,18 @@ function optionSelected(userSelection) {
         for (let i = 0; i < optionsLength; i++) {
             let child = optionList.children[i];
             // add css to turn correct answer green
+            child.style.opacity = 0.3;
+            
             if (child.textContent == correctAnswer) {
                 child.classList.add("correct");
-            } 
+                child.style.opacity = 1;
+            }
+
             if (child.textContent == userSelection) {
                 child.classList.add("wrong");
-            } else {
-                child.style.opacity = 0.3;
+                child.style.opacity = 1;
             }
+
         }
         moveBug();
         checkGameOver();
@@ -185,12 +189,11 @@ function startTimer(time) {
                     child.style.opacity = 0.3;
                 }
             }
-            
+
             disableOptions(optionsLength);
             moveBug();
             checkGameOver();
             modalNextButton.style.display = "block";
-            // console.log("done");
         }
     }
 }
