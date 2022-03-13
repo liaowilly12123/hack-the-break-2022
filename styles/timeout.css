@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+@media screen and (min-width: 390px) and (max-width: 450px) {
+    body {
+        background-color: #FFE77AFF;
+    }
+
+    #timeout-message i {
+        text-align: center;
+    }
+
+    #timeoutpage {
+        text-align: center;
+        margin-top: 50%;
+    }
+
+    #timeout-message p {
+        color: #FA0220;
+        font-size: 40pt;
+        font-family: 'Chakra Petch', sans-serif;
+    }
+
+    #timeoutpage a {
+        text-decoration: none;
+        color: #22B14C;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18pt;
+    }
+}
