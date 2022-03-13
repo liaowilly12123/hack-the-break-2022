@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@300&display=swap");
 
-@media screen and (min-width: 390px) and (max-width: 550px) {
+@media screen and (min-width: 350px) and (max-width: 550px) {
   body {
     background-color: #ffe77aff;
     max-height: 100%;
