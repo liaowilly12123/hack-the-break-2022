@@ -1,45 +1,141 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@300&display=swap");
 
 @media screen and (min-width: 390px) and (max-width: 450px) {
-    body {
-        background-color: #FFE77AFF;
-    }
+  body {
+    background-color: #ffe77aff;
+    max-height: 100vh;
+  }
 
-    i {
-        position: absolute;
-        top: 1%;
-        left: 3%;
-        font-size: 100px;
-        color: #22B14C;
-    }
+  i {
+    position: absolute;
+    top: 1%;
+    left: 3%;
+    font-size: 100px;
+    color: #22b14c;
+  }
 
-    #selectionpage {
-        text-align: center;
-    }
+  #selectionpage {
+    text-align: center;
+  }
 
-    #selectionpage img {
-        margin-top: 40%;
-    }
+  #selectionpage img {
+    margin-top: 40%;
+  }
 
-    #selectionpage P {
-        font-size: 25pt;
-        font-family: 'Chakra Petch', sans-serif;
-        font-weight: bold;
-        margin-bottom: 20%;
-    }
+  #selectionpage P {
+    font-size: 25pt;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: bold;
+    margin-bottom: 20%;
+  }
 
-    .button1 {
-        background-color: #22B14C;
-        border: none;
-        color: white;
-        padding: 20px;
-        margin: 7% 15% 0 15%;
-        text-align: center;
-        text-decoration: none;
-        display: block;
-        font-size: 25px;
-        font-family: 'Chakra Petch', sans-serif;
-        font-weight: bold;
+  .button {
+    background-color: #22b14c;
+    border: none;
+    color: white;
+    padding: 20px;
+    margin: 7% 15% 0 15%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 25px;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: bold;
+  }
+
+  /* Info Modal */
+  .info-modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    text-align: center;
+    display: none;
+  }
+
+  /* Quiz Modal */
+  .quiz-modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    text-align: center;
+    display: none;
+  }
+
+  .quiz-modal #content-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 39% 1% 50% 5%;
+  }
+
+  /* modal top nav */
+  #modal-nav {
+    /* background-color: #22b14c; */
+    /* height: 3em; */
+    background-color: rgb(219, 219, 219);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+  }
+
+  #path-container {
+    margin: 1em;
+    /* border: 1px black solid; */
+  }
+
+  #questions-container {
+    background-color: rgb(216, 210, 211);
+  }
+
+  .timebar {
+    height: 10px;
+    background: green;
+    border-radius: 10px;
+
+    /* animation: roundtime 4s linear forwards; */
+    transform-origin: right center;
+  }
+
+  @keyframes roundtime {
+    100% {
+      background-color: green;
     }
+    50% {
+      background-color: orange;
+    }
+    to {
+      background: red;
+      transform: scaleX(0);
+    }
+  }
+
+
+
+  /* Questions */
+  #questions-container {
+    
+  }
+
+  .question-text {
+
+  }
+
+  .option-list {
+
+  }
+
+  .option {
+      background-color: aquamarine;
+      margin: 0.1em;
+  }
 }

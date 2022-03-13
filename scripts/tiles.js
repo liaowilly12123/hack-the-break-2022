@@ -13,7 +13,7 @@ function createPath() {
         [[1,1],[2,1],[3,1],[3,2],[3,3],[2,3],[1,3],[1,4],[1,5],[2,5],[3,5],[4,5],[4,6],[5,6],[6,6],[6,5],[6,4],[6,3]],
         [[6,2],[6,1],[5,1],[4,1],[3,1],[2,1],[1,1],[1,2],[1,3],[1,4],[1,5],[1,6],[2,6],[3,6],[4,6],[5,6],[6,6],[6,5]]]
 
-
+        
     var randomNumber = Math.floor(Math.random() * 11);
     console.log("path: " + randomNumber);
     for (i = 0; i <= 17; i++) {
@@ -21,3 +21,11 @@ function createPath() {
         document.getElementById('path'+(i+1)).style.gridColumn=(path[randomNumber][i][1]);
     }
 }
+
+function loadComponentToId(nodeId, component) {
+    fetch(component)
+      .then(res => res.text())
+      .then(body => document.querySelector(nodeId).innerHTML = body)
+  }
+
+loadComponentToId("#path-container", "./tiles.html");
