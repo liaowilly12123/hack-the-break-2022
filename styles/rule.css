@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@300&display=swap');
+
+@media screen and (min-width: 390px) and (max-width: 450px) {
+    #rulepage {
+        margin-top: 40%;
+        font-family: 'Chakra Petch', sans-serif;
+    }
+
+    #rulepage p {
+        text-align: center;
+        font-size: 30pt;
+        color: #0b8530;
+    }
+
+    #rulepage ol {
+        font-size: 19pt;
+        color: #22B14C;
+    }
+}
